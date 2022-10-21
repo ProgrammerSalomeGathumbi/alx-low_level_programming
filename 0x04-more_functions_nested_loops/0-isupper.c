@@ -1,8 +1,9 @@
 #include "main.h"
-/*
- * _putchar -checks for uppercase character.
- * @c: character input
- * Return: Always 0
+/**
+ * _isupper - checks for uppercase character.
+ * @c: single character input
+ *
+ * Return: 1 for uppercase or 0 for lowercase
  */
 int _isupper(int c)
 {
