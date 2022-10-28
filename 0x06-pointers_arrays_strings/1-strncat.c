@@ -1,9 +1,9 @@
  #include "main.h"
 /**
-  *_strcat - concatenates 2 strings
+  *_strncat - concatenates 2 strings
   *@dest: array pointer
   *@src: array pointer
-  *@n: maximu size of src 
+  *@n: maximum size of src
   * Return: dest
   */
 char *_strncat(char *dest, char *src, int n)
@@ -14,7 +14,7 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		i++;
 	}
-	for(k = 0; k< n && *(src + k) != '\0'; k++, i++)
+	for (k = 0; k < n && *(src + k) != '\0'; k++, i++)
 	{
 		*(dest + i) = *(src + k);
 	}
