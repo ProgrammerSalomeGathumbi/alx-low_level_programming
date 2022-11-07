@@ -1,32 +1,28 @@
-  #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
+
 /**
-  * main -Entry point
-  * @argc: counts arguments
-  * @argv: string containing arguments
-  * Return: 1 when there is error
-  */
+ * main - Entry Point
+ * @argc: arguments
+ * @argv: array pointing to arguments
+ * Return: 0
+ */
 int main(int argc, char *argv[])
 {
-	int i = 1;
-	int j;
+	int i, sum = 0;
 
-	if (argc < 2)
+	if (argc < 1)
+		return (0);
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-	}
-	if (argc > 1)
-	{
-		for (; i < argc; i++)
+		if (!atoi(argv[i]))
 		{
-			if (!atoi(argv[i]))
-			{
-				printf("Error\n");
-				return (1);
-			}
-			j += atoi(argv[i]);
+			printf("%s\n", "Error");
+			return (1);
 		}
-		printf("%d\n", j);
+		sum += atoi(argv[i]);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
