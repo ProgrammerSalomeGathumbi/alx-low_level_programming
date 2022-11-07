@@ -1,4 +1,4 @@
- #include <stdio.h>
+  #include <stdio.h>
 #include <stdlib.h>
 /**
   * main -Entry point
@@ -10,15 +10,22 @@ int main(int argc, char *argv[])
 {
 	int i = 1;
 	int j;
-
-	if (argc == 1 || argc == 2 )
+	
+	if (argc == 1)
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
 	}
 	if (argc > 1)
 	{
-		j = atoi(argv[i]) * atoi(argv[i + 1]);
+		for (; i < argc; i ++)
+		{
+			if(!atoi(argv[i]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j += atoi(argv[i]);
+		}
 		printf("%d\n", j);
 	}
 	return (0);
