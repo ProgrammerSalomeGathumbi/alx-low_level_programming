@@ -12,21 +12,15 @@ char *create_array(unsigned int size, char c)
 	unsigned int x;
 	char *t;
 
-	if (size == 0)
-	{
-		return (NULL);
-	}
-
 	t = malloc(size * sizeof(char));
 
-	for (x = 0; x < size; x++)
-	{
-		t[size] = c;
-	}
-		
-	return (t);
-	if (t == NULL)
+	if (size == 0 || t == NULL)
 	{
 		return (NULL);
 	}
+	for (x = 0; x < size; x++)
+	{
+		t[x] = c;
+	}
+	return (t);
 }
