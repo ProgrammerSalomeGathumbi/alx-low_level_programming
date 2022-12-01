@@ -1,18 +1,27 @@
-#include "lists.h"
 #include <stdlib.h>
+#include "lists.h"
 /**
- * free_listint2 - Entry Point
- * @head: head
- * Return: 0
- */
+  * free_listint2 -  frees a ist.
+  * @head: head
+  * Return: nothing
+  */
 void free_listint2(listint_t **head)
 {
-	if (*head == NULL)
-		return;
-	while (*head)
+	listint_t *temp;
+
+	if (head)
 	{
-		free(*head);
-		*head = (*head)->next;
+		while (*head)
+		{
+			temp = (*head);
+			*head = (*head)->next;
+			free(temp);
+		}
 	}
-	*head = NULL;
+	else
+	{
+		return;
+	}
+	free(*head);
+	head = NULL;
 }
