@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <fcntl.h>
 /**
-  * read_textfile -  reads  text file and prints  to the POSIX std output.
+  * read_textfile -  reads  text file and prints  to the POSIX stdout.
   * @filename: The source file
   * @letters: Number of letters to reads and prints
   * Return: actual number of letters it could read and print
