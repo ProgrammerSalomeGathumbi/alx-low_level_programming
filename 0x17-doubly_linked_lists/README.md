@@ -1,0 +1,1 @@
+A doubly linked list in C programming is a data structure in which each element, also known as a node, contains a data field as well as two pointers, one pointing to the next element in the list and one pointing to the previous element in the list. This allows for easy traversal of the list in both forwards and backwards directions.
