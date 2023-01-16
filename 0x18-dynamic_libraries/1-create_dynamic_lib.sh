@@ -1,2 +1,2 @@
 #!/bin/bash
-ld -shared -o liball.so *o    
+ld -shared -o liball.so *o         
