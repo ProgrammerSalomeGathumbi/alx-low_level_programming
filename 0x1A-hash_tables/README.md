@@ -1,0 +1,2 @@
+C - Hash tables   
+A hash table is a data structure that allows for constant-time (O(1)) insertions, deletions, and lookups. It does this by using the output of a hash function as an index into an array. The array is called a "bucket," and each bucket contains a linked list of items with the same hash value. To look up an item, you compute its hash, find the corresponding bucket, and search the linked list for the item.
